@@ -1,4 +1,4 @@
-import heroImage from '../../assets/heroimage.jpg'
+import heroImage from '../../assets/hero.jpg'
 import './Hero.css';
 import React from 'react';
 
