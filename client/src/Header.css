@@ -1,0 +1,34 @@
+.main-header{
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #402E7A;
+    color: white;
+
+}
+.header-title{
+    border: 2px solid gray;
+    padding: 5px;
+}
+.header-menu{
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.navbar{
+    list-style-type: none;
+    border: 2px solid gray;
+    padding: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+
+
