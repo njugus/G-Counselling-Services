@@ -1,25 +1,26 @@
 .specialist-section{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 5px;
     margin-top: 1em;
     background-color: lavender;
+    border-radius: 5px;
 }
 .specialist-heading{
     text-align: center;
     font-family: var(--primary-font);
 }
 .specialist-wrapper{
-    border: 2px solid gray;
-    /* background-color: white; */
+    /* border: 2px solid gray; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1em;
+    padding: 20px;
    
 }
 .specialist-card{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     width: 100%;
     box-sizing: border-box;
     max-width: 250px;
