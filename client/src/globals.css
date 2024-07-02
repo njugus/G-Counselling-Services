@@ -4,12 +4,5 @@
 :root{
     --primary-font : "Poppins", sans-serif;
 }
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 

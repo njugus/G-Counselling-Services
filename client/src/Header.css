@@ -24,11 +24,11 @@
     
 }
 .header-title{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 5px;
 }
 .header-menu{
-    border: 2px solid gray;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,7 +38,7 @@
 
 .navbar{
     list-style-type: none;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 3px;
     display: flex;
     flex-direction: row;
