@@ -7,17 +7,33 @@
     margin-top: 1em;
     border-radius: 5px;
     box-shadow: 2px 2px 4px rgba(104, 8, 8, 0.7);
+    padding: 30px;
 }
 
 .item{
     /* border: 2px solid gray; */
     padding: 10px;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    /* margin-top: 2em; */
+    /* margin-bottom: 2em; */
     background-color: lightgray;
     font-family: var(--primary-font);
     border-radius: 5px;
     box-shadow: 2px 2px 4px rgba(104, 8, 8, 0.7);
+}
+
+@media screen and (max-width : 600px){
+    .numbers-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        padding: 10px;
+    }
+    .item{
+        max-width: 30%;
+        width: 100%;
+        margin: 0;
+    }
 }
 p{
     line-height: 1.5;
