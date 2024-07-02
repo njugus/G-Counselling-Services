@@ -1,13 +1,15 @@
 .hero-section{
     width: 100%;
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     height: auto;
     position: relative;
     padding: 2px;
+    border-radius: 5px;
+   
 }
 
 .hero-image-wrapper{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     position: relative;
     width: 100%;
     max-height: 500px;
@@ -49,5 +51,8 @@
     .catchyphrase{
         font-size: 1em;
     }
+
+
     
 }
+
