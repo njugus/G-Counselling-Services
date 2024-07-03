@@ -1,7 +1,7 @@
 import './Home.css';
 import { Hero } from './Hero';
 import About from './About';
-import Numbers from './Numbers';
+// import Numbers from './Numbers';
 import Specialists from './Specialist';
 import { Testimonials } from './Testimonials';
 
@@ -10,7 +10,7 @@ function Home () {
         <>
         <Hero />
         <About />
-        <Numbers />
+        {/* <Numbers /> */}
         <Specialists />
         <Testimonials />
         </>
