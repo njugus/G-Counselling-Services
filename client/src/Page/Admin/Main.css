@@ -15,4 +15,8 @@
 .stat-card{
     border: 2px solid gray;
     padding: 5px;
+    font-family: var(--primary-font);
+    background-color: lightgray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.6);
 }

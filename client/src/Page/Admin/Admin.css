@@ -4,6 +4,8 @@
     flex-direction: row;
     justify-content: flex-start;
     gap: 3em;
+    padding: 5px;
+    
 }
 .side-div{
     border: 2px solid gray;
@@ -18,4 +20,5 @@
     box-sizing: border-box;
     max-width: 70%;
     padding: 20px;
+    overflow-y: scroll;
 }
