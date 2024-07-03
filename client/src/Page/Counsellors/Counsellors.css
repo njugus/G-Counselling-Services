@@ -53,3 +53,12 @@ p{
     line-height: 1.5;
     color: slategray;
 }
+.handles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 5px;
+    border-radius: 5px; 
+}

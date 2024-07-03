@@ -1,0 +1,21 @@
+.admin-dashboard{
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3em;
+}
+.side-div{
+    border: 2px solid gray;
+    box-sizing: border-box;
+    max-width: 30%;
+    padding: 20px;
+    background-color: darkslategray;
+    color: white;
+}
+.main-div{
+    border: 2px solid gray;
+    box-sizing: border-box;
+    max-width: 70%;
+    padding: 20px;
+}

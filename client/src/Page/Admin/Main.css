@@ -1,0 +1,18 @@
+.dashboard-content{
+    border: 2px solid gray;
+    padding: 10px;
+    display: flex;
+    
+    
+}
+.stats{
+    border: 2px solid gray;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+.stat-card{
+    border: 2px solid gray;
+    padding: 5px;
+}
