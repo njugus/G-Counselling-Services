@@ -1,0 +1,14 @@
+.dashboard{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 5px;
+    
+    
+}
+.main-content{
+    /* border: 2px solid gray; */
+    background-color: lavender;
+    padding: 5px;
+    border-radius: 5px;
+}

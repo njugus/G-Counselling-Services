@@ -8,10 +8,11 @@ import { Contact } from './Page/Contact Us/Contact';
 import Footer from './Components/Footer';
 import Booking from './Page/Booking/Booking';
 
+
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Services" element={<Services />} />
@@ -19,7 +20,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Booking/:serviceId" element = {<Booking />} />
       </Routes>
-      <Footer />
+      
     </BrowserRouter>
   );
 }

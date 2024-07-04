@@ -1,22 +1,23 @@
 .dashboard-content{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 10px;
     display: flex;
     
     
 }
 .stats{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 10px;
     display: flex;
     flex-direction: row;
     gap: 2em;
+    
 }
 .stat-card{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     padding: 5px;
     font-family: var(--primary-font);
-    background-color: lightgray;
+    background-color: white;
     border-radius: 5px;
     box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.6);
 }

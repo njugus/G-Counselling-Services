@@ -1,9 +1,9 @@
 import './Management.css'
-function Management() {
+function Therapist() {
     return(
         <>
         <section className="Management-section">
-            <h1>User Management</h1>
+            <h1>Counsellor Management</h1>
             <div className="management-table">
         <table>
         <tr>
@@ -13,7 +13,7 @@ function Management() {
         </tr>
         <tr>
             <td>John Doe</td>
-            <td>Admin</td>
+            <td>Counsellor</td>
             <td>
                 <button class="button edit">Edit</button>
                 <button class="button delete">Delete</button>
@@ -21,7 +21,7 @@ function Management() {
         </tr>
         <tr>
             <td>Jane Smith</td>
-            <td>User</td>
+            <td>Counsellor</td>
             <td>
                 <button class="button edit">Edit</button>
                 <button class="button delete">Delete</button>
@@ -34,4 +34,4 @@ function Management() {
         </>
     )
 }
-export default Management;
+export default Therapist;
