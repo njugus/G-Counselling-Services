@@ -8,18 +8,18 @@ import { Connect } from './Connect';
 
 export function Admin() {
     return (
+        <></>
 
-        <section className="admin-dashboard">
-            {/* <Connect /> */}
-            <div className="side-div">
-            <Sidebar />
-            </div>
-            <div className="main-div">
-            <Main />
-            <Management />
-            </div>
+        // <section className="admin-dashboard">
+        //     <div className="side-div">
+        //     <Sidebar />
+        //     </div>
+        //     <div className="main-div">
+        //     <Main />
+        //     <Management />
+        //     </div>
             
-        </section>
+        // </section>
 
     )
 }

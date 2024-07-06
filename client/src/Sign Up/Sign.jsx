@@ -1,4 +1,6 @@
-import './Sign.css';
+import './Sign.css'
+import axios from 'axios';
+import { response } from 'express';
 
 // import the necessary dependencies
 import { Formik, Field, Form, ErrorMessage } from 'formik';
@@ -21,9 +23,19 @@ function Sign() {
                 initialValues={{ name: "", email: "", password: "", role: "" }}
                 validationSchema={signUpSchema}
                 onSubmit={(values, { setSubmitting }) => {
-                    console.log(values);
-                    setSubmitting(false);
-                }}
+                    axios.post("http://localhost:3000/signup", values)
+                    .then(response => {
+                        console.log(response.data);
+                        setSubmitting(false)
+                    }).catch(error => {
+                        console.log("There was an error", error);
+                        setSubmitting(false);
+                    })
+
+                    }
+                    // console.log(values);
+                    // setSubmitting(false);
+                }
             >
                 {({ isSubmitting }) => (
                     <Form>
@@ -46,7 +58,6 @@ function Sign() {
                             <label htmlFor="role">Role</label>
                             <Field as="select" name="role">
                                 <option value="" disabled >Please select a role</option>
-                                <option value="admin">Admin</option>
                                 <option value="client">Client</option>
                                 <option value="counselor">Counselor</option>
                             </Field>

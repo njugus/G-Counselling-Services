@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Header />
     <App />
-    <Connect />
+    {/* <Connect /> */}
     <Footer />
-  </React.StrictMode>,
+  </React.StrictMode>
 )

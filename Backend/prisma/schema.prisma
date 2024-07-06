@@ -1,0 +1,70 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String      @id @default(uuid())
+  name     String
+  email    String   @unique
+  password String
+  role     String
+  sessions  Session[] @relation("UserSessions")
+  bookings Booking[] @relation("BookedSessions")
+
+  @@map("users_table")
+}
+
+model Counsellor {
+  id             String      @id @default(uuid())
+  name           String   
+  title          String   
+  qualifications String   
+  createdAt      DateTime @default(now()) 
+  updatedAt      DateTime @updatedAt
+  sessions  Session[] @relation("CounsellorSessions")
+
+  @@map("counsellors_table")
+}
+
+model Session {
+  id            String      @id @default(uuid())
+  userId        String     
+  counsellorId  String     
+  date          DateTime
+  time          DateTime 
+  sessionType   String   
+  createdAt     DateTime @default(now()) 
+  updatedAt     DateTime @updatedAt 
+
+  @@map("sessions_table")
+
+  user          User      @relation(fields: [userId], references: [id], name: "UserSessions")
+  counsellor    Counsellor @relation(fields: [counsellorId], references: [id], name: "CounsellorSessions")
+  bookings Booking[] @relation("SessionsBooked")
+}
+model Booking {
+  id            String      @id @default(uuid())
+  userId        String     
+  sessionId     String     
+  date          DateTime 
+  time          DateTime 
+  contact       String   
+  createdAt     DateTime @default(now()) 
+  updatedAt     DateTime @updatedAt 
+
+  @@map("bookings")
+
+  user          User    @relation(fields: [userId], references: [id], name: "BookedSessions")
+  session       Session @relation(fields: [sessionId], references: [id], name: "SessionsBooked")
+}
