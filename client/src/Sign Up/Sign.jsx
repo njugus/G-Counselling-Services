@@ -1,12 +1,85 @@
+// import React from 'react';
+// import { useAuth } from '../Authentication/authentication';
+// import { Formik, Form, Field, ErrorMessage } from 'formik';
+// import * as Yup from 'yup';
+// import './Sign.css'
+
+
+// const Sign = () => {
+//     const { register } = useAuth();
+
+//     const initialValues = {
+//         name: '',
+//         email: '',
+//         password: '',
+//         role: ''
+//     };
+
+//     const validationSchema = Yup.object({
+//         name: Yup.string().required('Name is required'),
+//         email: Yup.string().email('Invalid email format').required('Email is required'),
+//         password: Yup.string().min(6, 'Password should be at least 6 characters').required('Password is required'),
+//         role: Yup.string().required('Role is required')
+//     });
+
+//     const onSubmit = (values, { setSubmitting, resetForm }) => {
+//         register(values.name, values.email, values.password, values.role);
+//         setSubmitting(false);
+//         resetForm();
+//     };
+
+//     return (
+//         <div>
+//             <h1>Register</h1>
+//             <Formik
+//                 initialValues={initialValues}
+//                 validationSchema={validationSchema}
+//                 onSubmit={onSubmit}
+//             >
+//                 {({ isSubmitting }) => (
+//                     <Form>
+//                         <div>
+//                             <label htmlFor="name">Name</label>
+//                             <Field type="text" name="name" />
+//                             <ErrorMessage name="name" component="div" />
+//                         </div>
+
+//                         <div>
+//                             <label htmlFor="email">Email</label>
+//                             <Field type="email" name="email" />
+//                             <ErrorMessage name="email" component="div" />
+//                         </div>
+
+//                         <div>
+//                             <label htmlFor="password">Password</label>
+//                             <Field type="password" name="password" />
+//                             <ErrorMessage name="password" component="div" />
+//                         </div>
+
+//                         <div>
+//                             <label htmlFor="role">Role</label>
+//                             <Field type="text" name="role" />
+//                             <ErrorMessage name="role" component="div" />
+//                         </div>
+
+//                         <button type="submit" disabled={isSubmitting}>Register</button>
+//                     </Form>
+//                 )}
+//             </Formik>
+//         </div>
+//     );
+// };
+
+// export default Sign;
+
+
 import './Sign.css'
 import axios from 'axios';
-import { response } from 'express';
-
-// import the necessary dependencies
+import { useAuth } from '../Authentication/authentication';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-// define a validation schema
+
 const signUpSchema = Yup.object().shape({
     name: Yup.string().required("Name is required"),
     email: Yup.string().email("Invalid Email Address").required("Email is required"),
@@ -15,6 +88,13 @@ const signUpSchema = Yup.object().shape({
 });
 
 function Sign() {
+    const { register } = useAuth();
+    
+        const onSubmit = (values, { setSubmitting, resetForm }) => {
+        register(values.name, values.email, values.password, values.role);
+        setSubmitting(false);
+        resetForm();
+    };
     return (
         <>
         <div className="signup-container">
@@ -22,20 +102,7 @@ function Sign() {
             <Formik
                 initialValues={{ name: "", email: "", password: "", role: "" }}
                 validationSchema={signUpSchema}
-                onSubmit={(values, { setSubmitting }) => {
-                    axios.post("http://localhost:3000/signup", values)
-                    .then(response => {
-                        console.log(response.data);
-                        setSubmitting(false)
-                    }).catch(error => {
-                        console.log("There was an error", error);
-                        setSubmitting(false);
-                    })
-
-                    }
-                    // console.log(values);
-                    // setSubmitting(false);
-                }
+                onSubmit={onSubmit}
             >
                 {({ isSubmitting }) => (
                     <Form>

@@ -1,10 +1,9 @@
-// ContactForm.js
+
 
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import './Contact.css'; // Import CSS for styling
-
+import './Contact.css'; 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required('Name is required'),
   email: Yup.string().email('Invalid email').required('Email is required'),

@@ -13,6 +13,7 @@ function Header() {
           <li><a href="/Services" style={{color: "white"}}>Services</a></li>
           <li><a href="/Counsellors" style={{color : "white"}}>Counsellors</a></li>
           <li><a href="/Contact" style={{color: "white"}}>Contact Us</a></li>
+          <li><a href="/logout" style={{color: "white"}}>Log Out</a></li>
         </ul>
       </div>
     </header>

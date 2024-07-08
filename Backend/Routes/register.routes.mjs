@@ -12,10 +12,11 @@ route_3.post("/", async(req, res) => {
             data : {
                 name : name,
                 email : email,
-                password : hashedPassword
+                password : hashedPassword,
+                role : role
             }
         })
-        res.status(201).json({message : alert("Registration Successfull")})
+        res.status(201).json({message : "Registration Successfull", res: result})
     }catch(e){
         res.status(500).json({success : true, message : e.message});
     }
